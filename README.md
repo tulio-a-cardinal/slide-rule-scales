@@ -1,6 +1,10 @@
 # slide-rule-scales
 This is a Python library for creating completely customisable slide rule scales. 
 
+## Visual Example
+![visual preview](./visual_example.png)
+A set of front and back circular slide rule scales created using multiple outputs from scripts using this library.
+
 ## Required Python libraries
 
 [NumPy](https://anaconda.org/anaconda/numpy) `pip install numpy`  
@@ -56,7 +60,7 @@ x, y and z are numbers. More details below.
   -            t_anchor - svg standard for anchoring the text: start, middle or end.
   -        t_position_x - Offset of the text anchor position in relation to the line's tip in the horizontal direction.
   -        t_position_y - Offset of the text anchor position in relation to the line's tip in the vertical direction.
-  -             t_angle - Angle of the text. 0° represents left to right text labeling a bottom to top line.
+  -             t_angle - Angle of the text. 0° represents left to right text labelling a bottom to top line.
 All sizes are in mm, and angles in degrees. Text properties (starting with t_) should be left blank when no text is desired.
 
 ## Draw specs file structure
