@@ -3,7 +3,7 @@ This is a Python library for creating completely customisable slide rule scales.
 
 ## Visual Example
 ![visual preview](./visual_example.png)
-A set of front and back circular slide rule scales created using multiple outputs from scripts using this library.
+A set of front and back circular slide rule scales created using the outputs from `VisualExample.py`.
 
 ## Required Python libraries
 

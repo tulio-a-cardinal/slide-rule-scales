@@ -1,0 +1,9 @@
+name,l_position_tip,l_position_base,l_width,t_font,t_size,t_anchor,t_position_x,t_position_y,t_angle
+5.8,1.5,0,0.15,,,,,,
+6,2,0,0.15,Lato,2,middle,0,0.2,0
+12,2,0,0.15,Lato,2,middle,0,0.2,0
+20,3,0,0.15,Lato,3,start,0.15,-1.5,0
+45,2,0,0.15,Lato,2,middle,0,0.2,0
+60,3,0,0.15,Lato,3,start,0.05,-1.5,0
+80,1.4,0,0.15,,,,,,
+90,3,0,0.15,Lato,3,start,0.05,-1.5,0

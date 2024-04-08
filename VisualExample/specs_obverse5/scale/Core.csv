@@ -1,0 +1,8 @@
+name,l_position_tip,l_position_base,l_width,t_font,t_size,t_anchor,t_position_x,t_position_y,t_angle
+10,-2,0,0.15,Lato,2,start,0,-0.7,-6
+30,-1.5,0,0.15,,,,,,
+100,-2,0,0.15,Lato,2,start,0,-0.7,-6
+300,-1.5,0,0.15,,,,,,
+1000,-2,0,0.15,Lato,2,start,0,-0.7,-6
+3000,-1.5,0,0.15,,,,,,
+10000,-2,0,0.15,Lato,2,start,0,-0.7,-6

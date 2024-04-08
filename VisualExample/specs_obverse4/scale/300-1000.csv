@@ -1,0 +1,4 @@
+interval,l_position_tip,l_position_base,l_width,t_font,t_size,t_anchor,t_position_x,t_position_y,t_angle
+200,1.5,0,0.15,,,,,,
+100,2,0,0.15,Lato,2,start,0.15,-0.8,0
+50,1,0,0.15,,,,,,
