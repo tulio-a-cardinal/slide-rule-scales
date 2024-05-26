@@ -63,20 +63,19 @@ class SlideRuleScale:
                     # Sets name based on 5 digit approximation of position
                     spec_mold.rename("{:.5f}".format(spec_mold["position"]).rstrip("0").rstrip("."), inplace=True)
 
-        # Edits one-offs on data
-        print(" -Editing one-offs ...")
+        # Organises data, edits one-offs on data and reconfigures data
+        print(" -Editing one-offs & Post processing ...")
+        self.scale_spec.sort_values(by="position", inplace=True)  # Puts all numbers in order. Good for debugging
+        # One-offs are added after ordering so that they are always prioritized
         filename = scale_specs_dir + "one-offs.csv"
         try:
             spec_one_offs = pd.read_csv(filename, dtype={"name": str}).set_index("name")
         except FileNotFoundError:
             print("   FILE NOT FOUND: " + filename + "\n   Empty file is assumed.")
             spec_one_offs = pd.DataFrame()
-        self.scale_spec = self.scale_spec.append(spec_one_offs)  # Appends additions.csv data
-        self.scale_spec = self.scale_spec[~self.scale_spec.index.duplicated(keep="last")]  # Deletes repeated names
-
-        # Organises and reconfigures data
-        print(" -Post processing ...")
-        self.scale_spec.sort_values(by="position", inplace=True)  # Puts all numbers in order. Good for debugging
+        self.scale_spec = self.scale_spec.append(spec_one_offs)  # Appends one-offs.csv data
+        # Deletes any line that was in the same position as any of the one-offs that were just added
+        self.scale_spec.drop_duplicates(subset="position", keep="last", inplace=True)
         self.scale_spec.reset_index(inplace=True)  # Removes names from index, leaving empty index (auto index)
 
         # Keeps track if scale was already set
